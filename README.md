@@ -36,10 +36,34 @@ You can also install ``python-telegram-bot`` from source, though this is usually
  Now download the script itself for execution
     
     $ git clone https://github.com/Zarzhitskydmitry/Telegram-bot-asterisk
+    $ cd Telegram-bot-asterisk/
     
 Set script execution privileges
 
     $ chmod +x ./bot.sh ./apache_status.sh ./aster_trunk.sh ./sip_show_registry.sh ./botsipr.sh ./cdr-clear.sh
+    
+In the bot file.py I filled in all three blocks, according to other functions. To make the bot work, you need to run the file bot.sh . For convenience, we will create a separate service for the Telegram bot. Create the necessary file and set the rights:
+
+    $ touch /etc/systemd/system/telegram-bot.service
+    $ chmod 664 /etc/systemd/system/telegram-bot.service
+
+Then go to the service file:
+    
+    $ nano /etc/systemd/system/telegram-bot.service
+    ```bash
+    [Unit]
+    Description=Telegram bot
+    After=network.target
+    [Service]
+    ExecStart=/'YOUR DIRECTORY'/Telegram-bot-asterisk/bot.sh
+    [Install]
+    WantedBy=multi-user.target
+    ```
+Now we add the service to the startup and run:
+
+    $ systemctl start telegram-bot.service
+    $ systemctl enable telegram-bot.service
+    $ systemctl status telegram-bot.service
 
 Create symbolic link 
 
