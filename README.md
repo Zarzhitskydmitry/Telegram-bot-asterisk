@@ -51,7 +51,7 @@ Then go to the service file:
     
     $ nano /etc/systemd/system/telegram-bot.service
     
-    ```bash
+ ```bash
     [Unit]
     Description=Telegram bot
     After=network.target
@@ -59,7 +59,7 @@ Then go to the service file:
     ExecStart=/'YOUR DIRECTORY'/Telegram-bot-asterisk/bot.sh
     [Install]
     WantedBy=multi-user.target
-    ```
+  ```
 Now we add the service to the startup and run:
 
     $ systemctl start telegram-bot.service
