@@ -21,7 +21,7 @@ You can install or upgrade ``python-telegram-bot`` via
 
 .. code:: shell
 
-    $ pip install python-telegram-bot --upgrade
+    $ pip3 install python-telegram-bot --upgrade
 
 To install a pre-release, use the ``--pre`` `flag <https://pip.pypa.io/en/stable/cli/pip_install/#cmdoption-pre>`_ in addition.
 
