@@ -33,6 +33,10 @@ You can also install ``python-telegram-bot`` from source, though this is usually
     $ cd python-telegram-bot
     $ python setup.py install
     
+ Now download the script itself for execution
+    
+    $ git clone https://github.com/Zarzhitskydmitry/Telegram-bot-asterisk
+    
 Set script execution privileges
 
     $ chmod +x ./bot.sh ./apache_status.sh ./aster_trunk.sh ./sip_show_registry.sh ./botsipr.sh ./cdr-clear.sh
