@@ -50,6 +50,7 @@ In the bot file.py I filled in all three blocks, according to other functions. T
 Then go to the service file:
     
     $ nano /etc/systemd/system/telegram-bot.service
+    
     ```bash
     [Unit]
     Description=Telegram bot
