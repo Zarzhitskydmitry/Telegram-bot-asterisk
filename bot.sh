@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 /root/admin/bot.py
+python3 ./bot.py
